@@ -1,14 +1,181 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../work/css/css/reset.css">
+  <link rel="stylesheet" href="../work/css/css/base.css">
+  <link rel="stylesheet" href="../work/css/css/style.css">
   <title>FormPractice</title>
 </head>
 
 <body>
-
+  <section class="account__form">
+    <div class="wrapper">
+      <h1 class="form__title">フォーム作成</h1>
+      <div class="form-wrapper">
+        <form action="">
+          <h2 class="contents__title">アカウント作成</h2>
+          <div class="personal__content">
+            <h3 class="subtitle">個人情報</h3>
+            <div class="personal__label">
+              <label for="family-name">
+                <p class="label__text">名字<span class="attension">※</span></p>
+              </label>
+              <input type="text" id="family-name" class="input__area" required>
+            </div>
+            <div class="personal__label">
+              <label for="given-name">
+                <p class="label__text">名前<span class="attension">※</span></p>
+              </label>
+              <input type="text" id="given-name" class="input__area" required>
+            </div>
+            <div class="personal__label">
+              <label for="">
+                <p class="label__text">生年月日<span class="attension">※</span></p>
+              </label>
+              <div class="personal__birtharea">
+                <div class="select__area">
+                  <select name="year" id="year" class="input__area">
+                    <option value="年" disabled selected>年</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                  </select>
+                </div>
+                <div class="select__area">
+                  <select name="month" id="month" class="input__area">
+                    <option value="月" disabled selected>月</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+                <div class="select__area">
+                  <select name="day" id="day" class="input__area">
+                    <option value="日" disabled selected>日</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="personal__label">
+              <p class="label__text">性別<span class="attension">※</span></p>
+              <div class="gender__area">
+                <label class="gender__radio">
+                  <input type="radio" value="man" class="gender__btn" name="gender"><!-- inputタグは、nameとtypeを指定しないと機能しない -->
+                  <span>男性</span>
+                </label>
+                <label class="gender__radio">
+                  <input type="radio" value="woman" class="gender__btn" name="gender">
+                  <span>女性</span>
+                </label>
+                <label class="gender__radio">
+                  <input type="radio" value="other" class="gender__btn" name="gender">
+                  <span>その他</span>
+                </label>
+              </div>
+            </div>
+            <div class="personal__label">
+              <p class="label__text">職業</p>
+              <div class="select__area">
+                <select name="work" id="work" class="input__area">
+                  <option value="選択してください" disabled selected>選択してください</option>
+                  <option value="学生">学生</option>
+                  <option value="会社員">会社員</option>
+                  <option value="主婦">主婦</option>
+                  <option value="その他">その他</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="account__content">
+            <h3 class="subtitle">アカウント情報</h3>
+            <div class="account__label">
+              <label for="account-name">
+                <p class="label__text">アカウント名<span class="attension">※</span></p>
+              </label>
+              <input type="text" id="account-name" class="input__area" required>
+            </div>
+            <div class="account__label">
+              <label for="account-mail">
+                <p class="label__text">メールアドレス<span class="attension">※</span></p>
+              </label>
+              <input type="email" id="mail" class="input__area" required>
+            </div>
+            <div class="account__label">
+              <label for="account-password">
+                <p class="label__text">パスワード<span class="attension">※</span></p>
+              </label>
+              <input type="password" id="password" class="input__area" required>
+            </div>
+            <div class="account__label">
+              <label for="account-password">
+                <p class="label__text">確認用パスワード<span class="attension">※</span></p>
+              </label>
+              <input type="password" id="confirm__password" class="input__area" required>
+            </div>
+          </div>
+          <div class="address__content">
+            <h3 class="subtitle">連絡先</h3>
+            <div class="address__label">
+              <label for="address-name">
+                <p class="label__text">住所<span class="attension">※</span></p>
+              </label>
+              <input type="text" id="address" class="input__area" required>
+            </div>
+            <div class="address__label">
+              <label for="account-mail">
+                <p class="label__text">電話番号<span class="attension">※</span></p>
+              </label>
+              <input type="tel" id="tel" class="input__area" required>
+            </div>
+          </div>
+          <div class="info__content">
+            <h3 class="subtitle">購読情報</h3>
+            <div class="info__label"><!-- 「label for」と「input id」で紐付け -->
+              <input type="checkbox" id="mailmagajin" name="mailmagajin" value="mailmagajin"><!-- name欄の回答を送信する -->
+              <label for="mailmagajin"  class="label__text checkbox">メールマガジン</label>
+            </div>
+            <div class="info__label">
+              <input type="checkbox" id="coupon" name="coupon" value="coupon">
+              <label for="coupon"  class="label__text checkbox">クーポン</label>
+            </div>
+          </div>
+          <div class="submit__content">
+            <button type="submit" class="btn__submit btn">アカウント作成</button>
+            <p class="other-text">アカウントを作成することにより、<a class="link-color" href="#">利用規約</a>と<a class="link-color"
+              href="#">プライバシーポリシー</a>に同意するものとします。
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
-
 </html>

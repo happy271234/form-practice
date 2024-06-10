@@ -1,1 +1,168 @@
 @charset "UTF-8";
+input, select{
+  appearance: none;/* フォーム欄のラジオボタンに搭載されるcssを削除 */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0px;
+}
+.account__form{
+  width: 100%;
+  background-color: #cff1ff;
+}
+.wrapper{
+  width: 600px;
+  margin:0 auto;
+}
+.form__title{
+  text-align: center;/* ブロック要素に適用 */
+  font-size: 28px;
+  color: #000;
+  padding-top: 60px;
+}
+.form-wrapper{
+  margin-top:60px;
+  padding: 50px;
+  background-color: #ecfaff;
+}
+.contents__title{
+  font-size: 24px;
+  text-align: center;
+}
+.label__text{
+  font-size: 14px;
+  color: #464646;
+}
+.attension{
+  color:#e40000;
+}
+/* 個人情報フォーム */
+.personal__content, .account__content, .address__content, .info__content, .submit__content{
+  margin-top: 50px;
+}
+.subtitle{
+  font-size: 18px;
+  color: #000;
+}
+.personal__label, .account__label, .address__label, .info__label{
+  margin-top: 25px;
+}
+.input__area{
+  width: 100%;
+  height: 35px;
+  margin-top:5px;
+  padding: 5px;
+  color: #545658;
+  border: 1px solid #d9d9d9;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+}
+.personal__birtharea{
+  display: flex;
+}
+.select__area{
+  width: 100%;
+  position: relative;
+}
+.select__area::after{
+  content: "";
+  position: absolute;
+  top:45%;
+  right: 10px;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  transform: rotate(45deg);
+  border-right: 2px solid #c3c3c3;
+  border-bottom: 2px solid #c3c3c3;
+}
+.gender__area{
+  margin-top: 5px;
+}
+.gender__radio{
+  margin-left: 5px;
+}
+.gender__radio span{
+  position: relative;
+  display: inline-block;
+  padding: 5px 3px 3px 20px;
+  color: #545658;
+}
+.gender__radio span:before{/* 疑似要素 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  background-color: #fbfbfb;
+  transform: translateY(-50%);
+}
+.gender__btn:checked + span:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #017cbf;
+  transform: translateY(-50%);
+}
+.checkbox{
+  position: relative;
+  padding-left: 60px;
+}
+.checkbox::before{/* チェックボックスの枠 */
+  content: "";
+  position: absolute;
+  top:50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: -9px;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+}
+.info__label input:checked + .checkbox::after{
+  content: "";
+  position: absolute;
+  top:50%;
+  left:6px;
+  width: 6px;
+  height: 13px;
+  margin-top: -11px;
+  border-right: 3px solid #0140bf;
+  border-bottom: 3px solid #0140bf;
+  transform: rotate(45deg);
+}
+.btn__submit{
+  padding: 13px;
+  background-color: #0170bf;
+  color: #fff;
+}
+.btn{
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3.s;
+}
+.btn__submit:active{
+  padding: 13px;
+  background-color: #fff;
+  color: #0170bf;
+}
+.other-text{
+  margin-top: 25px;
+  font-size: 10px;
+}
+.link-color{
+  color: #0170bf;
+  text-decoration: none;
+}
